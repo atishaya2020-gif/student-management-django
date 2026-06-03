@@ -23,6 +23,15 @@
                 <form method="POST">
 
                     {% csrf_token %}
+                    {% if form.errors %}
+
+<div class="alert alert-danger">
+
+Invalid username or password. Please try again.
+
+</div>
+
+{% endif %}
 
 
                     <div class="mb-3">
